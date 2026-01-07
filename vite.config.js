@@ -44,29 +44,22 @@ export default defineConfig({
 
         runtimeCaching: [
           {
-            // JS e CSS
+            // JS, CSS, imagens
             urlPattern: ({ request }) =>
-              request.destination === "script" ||
-              request.destination === "style",
+              ["style", "script", "image", "font"].includes(
+                request.destination
+              ),
             handler: "CacheFirst",
             options: {
               cacheName: "assets-cache",
-            },
-          },
-          {
-            // IMAGENS (essencial para offline + canvas)
-            urlPattern: ({ request }) => request.destination === "image",
-            handler: "CacheFirst",
-            options: {
-              cacheName: "images-cache",
               expiration: {
-                maxEntries: 300,
+                maxEntries: 200,
                 maxAgeSeconds: 60 * 60 * 24 * 30,
               },
             },
           },
           {
-            // APIs
+            // APIs (se usar futuramente)
             urlPattern: /^https?.*/,
             handler: "NetworkFirst",
             options: {
