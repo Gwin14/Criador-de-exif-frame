@@ -158,14 +158,14 @@ export default function App() {
   };
 
   const preloadImages = [
-    "/assets/brandIcons/apple.png",
-    "/assets/brandIcons/canon.png",
-    "/assets/brandIcons/sony.png",
-    "/assets/brandIcons/nikon.png",
-    "/assets/brandIcons/fuji.png",
-    "/assets/brandIcons/olympus.png",
-    "/assets/brandIcons/panasonic.png",
-    "/assets/brandIcons/leica.png",
+    "/assets/apple.png",
+    "/assets/canon.png",
+    "/assets/sony.png",
+    "/assets/nikon.png",
+    "/assets/fuji.png",
+    "/assets/olympus.png",
+    "/assets/panasonic.png",
+    "/assets/leica.png",
   ];
 
   // ---------- render ----------
