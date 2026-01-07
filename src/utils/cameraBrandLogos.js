@@ -1,72 +1,82 @@
+import apple from "../assets/brandIcons/apple.png";
+import canon from "../assets/brandIcons/canon.png";
+import nikon from "../assets/brandIcons/nikon.png";
+import sony from "../assets/brandIcons/sony.png";
+import fujifilm from "../assets/brandIcons/fujifilm.png";
+import leica from "../assets/brandIcons/leica.png";
+import panasonic from "../assets/brandIcons/panasonic.png";
+import olympus from "../assets/brandIcons/olympus.png";
+import pentax from "../assets/brandIcons/pentax.png";
+import hasselblad from "../assets/brandIcons/hasselblad.png";
+import dji from "../assets/brandIcons/dji.png";
+import gopro from "../assets/brandIcons/gopro.png";
+
 const BRANDS = [
   {
     name: "Apple",
     match: ["apple", "iphone"],
-    logo: "src/assets/brandIcons/apple.png",
+    logo: apple,
   },
   {
     name: "Canon",
     match: ["canon"],
-    logo: "src/assets/brandIcons/canon.png",
+    logo: canon,
   },
   {
     name: "Nikon",
     match: ["nikon"],
-    logo: "src/assets/brandIcons/nikon.png",
+    logo: nikon,
   },
   {
     name: "Sony",
     match: ["sony"],
-    logo: "src/assets/brandIcons/sony.png",
+    logo: sony,
   },
   {
     name: "Fujifilm",
     match: ["fujifilm", "fuji"],
-    logo: "src/assets/brandIcons/fujifilm.png",
+    logo: fujifilm,
   },
   {
     name: "Leica",
     match: ["leica"],
-    logo: "src/assets/brandIcons/leica.png",
+    logo: leica,
   },
   {
     name: "Panasonic",
     match: ["panasonic", "lumix"],
-    logo: "src/assets/brandIcons/panasonic.png",
+    logo: panasonic,
   },
   {
     name: "Olympus",
     match: ["olympus", "om system", "omsystem"],
-    logo: "src/assets/brandIcons/olympus.png",
+    logo: olympus,
   },
   {
     name: "Pentax",
     match: ["pentax", "ricoh"],
-    logo: "src/assets/brandIcons/pentax.png",
+    logo: pentax,
   },
   {
     name: "Hasselblad",
     match: ["hasselblad"],
-    logo: "src/assets/brandIcons/hasselblad.png",
+    logo: hasselblad,
   },
   {
     name: "DJI",
     match: ["dji"],
-    logo: "src/assets/brandIcons/dji.png",
+    logo: dji,
   },
   {
     name: "GoPro",
     match: ["gopro"],
-    logo: "src/assets/brandIcons/gopro.png",
+    logo: gopro,
   },
 ];
 
 export function getCameraBrandLogo(make) {
   if (!make) {
-    return {
-      name: null,
-      logo: null,
-    };
+    return { name: null, logo: null };
   }
 
   const normalized = make.toLowerCase();
@@ -76,10 +86,7 @@ export function getCameraBrandLogo(make) {
   );
 
   if (!brand) {
-    return {
-      name: null,
-      logo: null,
-    };
+    return { name: null, logo: null };
   }
 
   return {
