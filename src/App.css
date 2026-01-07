@@ -1,6 +1,6 @@
 .image-upload {
   position: relative;
-  margin: 20px;
+  margin: 20px auto;
   padding: 10px;
   border: 2px dashed #00e1ff91;
   border-radius: 5px;
@@ -50,6 +50,7 @@
 .title {
   text-align: center;
   color: #fffef6;
+  font-size: 24px;
 }
 
 .image-upload:hover {

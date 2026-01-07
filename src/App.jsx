@@ -120,7 +120,9 @@ export default function App() {
         </>
       ) : (
         <div>
-          <h1 className="title">Gerador de exif frame</h1>
+          <h1 className="title" >
+            Gerador de exif frame
+          </h1>
           <div className="image-upload">
             <p>Clique ou arraste uma foto</p>
             <input type="file" onChange={handleImageUpload} accept="image/*" />
