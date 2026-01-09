@@ -5,6 +5,7 @@ import {
 } from "../../utils/exifFormatters";
 import { getCameraBrandLogo } from "../../utils/cameraBrandLogos";
 import "./Classic.css";
+import Sidebar from "../Sidebar";
 
 export default function Classic({
   frameRef,
@@ -16,6 +17,8 @@ export default function Classic({
 
   return (
     <div ref={frameRef} className="classic-frame">
+      <Sidebar />
+
       {/* FOTO */}
       <img
         className="photo"
