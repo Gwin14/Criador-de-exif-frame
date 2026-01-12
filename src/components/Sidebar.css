@@ -1,3 +1,33 @@
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-title {
+  font-size: 24px;
+}
+
+.reset-button {
+  background-color: #00e1ff1a;
+  color: #f8fbff;
+  border: 2px solid #00e1ff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition-duration: 150ms;
+}
+
+.reset-button:hover {
+  background-color: #00e1ff33;
+}
+
 .sidebar {
   position: fixed;
   bottom: 0;
@@ -17,6 +47,7 @@
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.2s;
+  margin: 10px 0px 20px 0px;
 }
 
 /* WebKit (Safari / Chrome) */
@@ -78,5 +109,5 @@
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  margin: 10px 0px 5px 0px;
+  margin: 15px 0px 5px 0px;
 }

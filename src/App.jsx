@@ -72,7 +72,7 @@ export default function App() {
 
       {imageUrl && metadata ? (
         <>
-          <div style={{ width: "100%", maxWidth: "800px", margin: "0 auto" }}>
+          <div className="frame-container" >
             <Classic
               frameRef={frameRef}
               imageUrl={imageUrl}
