@@ -11,7 +11,7 @@
   overflow: hidden;
   transform: translateX(-15vw);
 
-  animation: fadeGrow 0.5s ease-out;
+  animation: fadeGrow 0.5s ease forwards;
 
   .metadados {
     font-size: 8px;
@@ -44,5 +44,13 @@
 
   .bold {
     font-weight: 700;
+  }
+}
+
+@media (max-width: 768px) {
+  .classic-frame {
+    transform: translateX(0);
+    margin: 20px auto;
+    animation: fadeGrow2 0.5s ease forwards;
   }
 }

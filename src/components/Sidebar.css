@@ -40,7 +40,7 @@
   color: #fffff8;
   padding: 40px;
 
-  animation: slideLeft 0.5s ease-out;
+  animation: slideLeft 0.5s ease forwards;
 }
 
 .slider {
@@ -114,4 +114,18 @@
   justify-content: space-between;
   font-size: 14px;
   margin: 15px 0px 5px 0px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100vw;
+    max-width: 750px;
+    border-radius: 10px 10px 0 0;
+    height: auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px !important;
+
+    animation: fadeToTop 0.5s ease forwards;
+  }
 }

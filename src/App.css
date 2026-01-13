@@ -94,3 +94,20 @@
 .blue-btn:hover {
   background-color: #00e1ff33;
 }
+
+@media (max-width: 768px) {
+  .title {
+    margin-top: 20px;
+  }
+  .upload-screen {
+    transform: translateY(25dvh);
+  }
+
+  .action-buttons {
+    transform: translateX(0);
+    background-color: #31363b;
+    padding: 10px 40px 20px 40px;
+    margin-top: 0px !important;
+   
+  }
+}
