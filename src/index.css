@@ -28,11 +28,39 @@ body {
 
 @keyframes fadeGrow {
   0% {
+    transform: scale(0.8) translateX(-15vw);
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(-15vw);
+  }
+}
+
+@keyframes fadeGrow2 {
+  0% {
     transform: scale(0.8);
+    opacity: 0;
   }
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(30vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  html,
+  body {
+    align-items: flex-start;
   }
 }

@@ -3,14 +3,15 @@
 .classic-frame {
   display: flex;
   gap: 6px;
-  padding: 5px;
   background-color: #ffffff;
   color: #000000;
   width: 350px;
   font-family: monospace;
   flex-direction: column;
-  
-  animation: fadeGrow 0.3s ease-in-out;
+  overflow: hidden;
+  transform: translateX(-15vw);
+
+  animation: fadeGrow 0.5s ease forwards;
 
   .metadados {
     font-size: 8px;
@@ -43,5 +44,13 @@
 
   .bold {
     font-weight: 700;
+  }
+}
+
+@media (max-width: 768px) {
+  .classic-frame {
+    transform: translateX(0);
+    margin: 20px auto;
+    animation: fadeGrow2 0.5s ease forwards;
   }
 }
