@@ -28,8 +28,6 @@ export default function Classic({
 
   return (
     <>
-      <Sidebar initialModifiers={initialModifiers} onChange={setModifiers} />
-
       <div
         ref={frameRef}
         className="classic-frame"
@@ -80,6 +78,8 @@ export default function Classic({
           </div>
         </div>
       </div>
+
+      <Sidebar initialModifiers={initialModifiers} onChange={setModifiers} />
     </>
   );
 }

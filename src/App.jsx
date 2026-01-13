@@ -72,7 +72,7 @@ export default function App() {
 
       {imageUrl && metadata ? (
         <>
-          <div className="frame-container" >
+          <div className="frame-container">
             <Classic
               frameRef={frameRef}
               imageUrl={imageUrl}

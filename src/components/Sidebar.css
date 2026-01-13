@@ -22,6 +22,7 @@
   align-items: center;
   gap: 8px;
   transition-duration: 150ms;
+  margin-left: 5px;
 }
 
 .reset-button:hover {
@@ -29,14 +30,17 @@
 }
 
 .sidebar {
-  position: fixed;
+  position: fixed; /* AQUI */
   bottom: 0;
   right: 0;
   background-color: #31363b;
   height: 100dvh;
   width: 30vw;
+  min-width: 300px;
   color: #fffff8;
   padding: 40px;
+
+  animation: slideLeft 0.5s ease-out;
 }
 
 .slider {

@@ -9,8 +9,9 @@
   font-family: monospace;
   flex-direction: column;
   overflow: hidden;
+  transform: translateX(-15vw);
 
-  animation: fadeGrow 0.3s ease-in-out;
+  animation: fadeGrow 0.5s ease-out;
 
   .metadados {
     font-size: 8px;
