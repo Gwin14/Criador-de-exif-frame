@@ -7,8 +7,12 @@ export const exportImage = async (frameRef, imageLoaded) => {
     // Configurações otimizadas para Safari
     const options = {
       cacheBust: true,
-      pixelRatio: 4, // Safari tem limites severos de memória. 2 ou 3 é o ideal.
+      pixelRatio: 3, // Safari tem limites severos de memória. 2 ou 3 é o ideal.
       backgroundColor: "#ffffff",
+      style: {
+        transform: "none", // Remove qualquer escala/zoom aplicado na visualização
+        margin: "0",
+      },
     };
 
     // 1. "Esquenta" o renderizador (Safari Bug Fix)
@@ -35,7 +39,7 @@ export const exportImage = async (frameRef, imageLoaded) => {
         }, 200);
       },
       "image/png",
-      1.0
+      1.0,
     );
   } catch (error) {
     console.error("Falha na exportação:", error);
