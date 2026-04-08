@@ -13,6 +13,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
 }
 
 @keyframes fadeToTop {
@@ -56,7 +58,6 @@ body {
     transform: translateX(0);
   }
 }
-
 
 @media (max-width: 768px) {
   html,
