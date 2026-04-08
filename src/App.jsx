@@ -18,6 +18,41 @@ export default function App() {
   });
 
   useEffect(() => {
+    const handleMessage = async (event) => {
+      // Aceita mensagens do app React Native
+      const msg = event.data;
+      if (!msg || typeof msg !== "object") return;
+      if (msg.type !== "LOAD_PHOTO") return;
+
+      try {
+        // msg.base64 é a foto em base64 (com ou sem prefixo data:image/...)
+        const base64 = msg.base64.startsWith("data:")
+          ? msg.base64
+          : `data:image/jpeg;base64,${msg.base64}`;
+
+        setImageUrl(base64);
+
+        // Converter base64 para File para o exifr conseguir parsear
+        const res = await fetch(base64);
+        const blob = await res.blob();
+        const file = new File([blob], "photo.jpg", { type: "image/jpeg" });
+
+        const data = await exifr.parse(file, {
+          exif: true,
+          tiff: true,
+          gps: true,
+        });
+        setMetadata(data || {});
+      } catch (err) {
+        console.error("Erro ao carregar foto via postMessage:", err);
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => {
       setSize({ width: window.innerWidth, height: window.innerHeight });
     };
